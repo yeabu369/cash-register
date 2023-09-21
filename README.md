@@ -1,70 +1,45 @@
-# Getting Started with Create React App
+# Cash Register Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This application is a simple cash register simulator built using React. It allows you to add and remove money in different denominations, and dispense change.
+## Functionality
 
-## Available Scripts
+The main functionality of the application is contained within the CashRegister component.
 
-In the project directory, you can run:
+The CashRegister component maintains a state of the cash register, which is an object where the keys are the denominations of the money and the values are the counts of each denomination.
 
-### `npm start`
+```javascript
+const [register, setRegister] = useState({
+  20: 0,
+  10: 0,
+  5: 0,
+  2: 0,
+  1: 0
+});
+```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+The application provides the following functionalities:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+1. **Add Money**: You can add money to the cash register by entering the count of each denomination and clicking the "Add" button. The addMoney function is used to update the state of the cash register.
 
-### `npm test`
+2. **Remove Money**: You can remove money from the cash register by entering the count of each denomination and clicking the "Remove" button. The removeMoney function is used to update the state of the cash register.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+3. **Dispense Change**: You can dispense change by entering an amount and clicking the "Dispense" button. The dispenseChange function is used to update the state of the cash register.
 
-### `npm run build`
+The current state of the cash register is displayed on the screen, showing the total amount of money and the count of each denomination.
+## Testing
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+The application includes tests for the CashRegister component using the React Testing Library. The tests ensure that the add, remove, and dispense change functionalities work correctly.
+## Running the Application
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+To run the application, use the start script defined in the package.json file:
+```bash
+npm start
+```
+This will start the application in development mode. Open http://localhost:3000 to view it in the browser.
+## Building the Application
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+To build the application for production, use the build script defined in the package.json file:
+```bash
+npm build
+```
+This will build the application for production to the build folder. It correctly bundles React in production mode and optimizes the build for the best performance.

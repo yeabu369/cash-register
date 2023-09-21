@@ -1,5 +1,6 @@
 {
   "name": "cash-register",
+  "description": "A simple cash register application",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

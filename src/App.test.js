@@ -1,8 +1,8 @@
 import { render, screen } from '@testing-library/react';
 import App from './App';
 
-test('renders learn react link', () => {
+test('renders CashRegister component', () => {
   render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+  const cashRegisterElement = screen.getByText(/cash register/i); // adjust this to match a unique text in your CashRegister component
+  expect(cashRegisterElement).toBeInTheDocument();
 });

@@ -1,0 +1,22 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.cash-register {
+    text-align: center;
+}
+
+.input-field {
+    margin: 10px 0;
+    padding: 5px;
+    font-size: 16px;
+}
+
+.button {
+    padding: 5px 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
