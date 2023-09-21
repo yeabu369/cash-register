@@ -1,6 +1,10 @@
 # Cash Register Application
 
 This application is a simple cash register simulator built using React. It allows you to add and remove money in different denominations, and dispense change.
+## Demo
+
+You can access the live demo of the application at [this link](https://cash-register-khaki.vercel.app/)
+
 ## Functionality
 
 The main functionality of the application is contained within the CashRegister component.
